@@ -1,0 +1,258 @@
+<!--Student Name: Lam Wai To Keith-->
+<!--SID: 1155133260-->
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+ 
+        <!--fontAwesome-->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
+        <!--bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        <!--google font-->
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en" />
+
+        <!--css-->
+        <link rel="stylesheet" href="style.css">
+
+        <!--JavaScript-->
+        <script src="index.js"></script>
+
+    </head>
+
+    <body>
+        <header class="header row background-image">
+            <div class="container col-10 col-lg-7 col-xl-7">
+                <h1 id="header-title" class="text-responsive">Lam Wai To Keith</h1>
+                <hr>
+                <p id="header-content">Year 3 student of The Chinese University of Hong Kong, <br>Mathematics Major, Computer Science, Web and cloud computing Minor</p>
+            </div>
+            <image src="profile_image.jpeg" class="d-none d-sm-none d-md-none d-lg-block d-xl-block image-fluid col-lg-4 col-xl-4" style="margin-right: 40px;"/>
+        </header>
+
+        <nav id="navbar" class="navbar navbar-expand navbar-light sticky-top d-block">
+            <ul class="navbar-nav d-flex justify-content-center">
+                <li id="about" class="nav-item" onclick="scrollToAboutMe()">
+                    <a class="nav-link" href="javascript:;"><i class="fa fa-info-circle"></i> About</a>
+                </li>
+                <li id="courses" class="nav-item" onclick="scrollToCourses()">
+                    <a class="nav-link" href="javascript: void(0);"><i class="fa fa-book"></i> Courses</a>
+                </li>
+                <li id="response-web" class="nav-item" onclick="scrollToResponsiveWeb()">
+                    <a class="nav-link" href="javascript: void(0);"><i class="fa fa-arrow-circle-o-left"></i> Responsive Web</a>
+                </li>
+                <li id="links" class="nav-item" onclick="scrollToLinks()">
+                    <a class="nav-link" href="javascript: void(0);"><i class="fa fa-external-link"></i> Links</a>
+                </li>
+                <li id="special" class="nav-item" onclick="showTaskbar()" >
+                    <a class="nav-link" href="javascript: void(0);"><i class="fa fa-birthday-cake"></i> Special!</a>
+                </li>
+            </ul>
+
+            <div id="taskbar" class="container-fluid">
+                <div class="row">
+                    <div class="col-4">
+                        <button type="button" class="btn btn-light" onclick="align()">Task1: Align</button>
+                    </div>
+                    <div class="col-4">
+                        <button id="hobby" type="button" class="btn btn-light" onclick="promptHobby()">Task2: New Hobby</button>
+                    </div>
+                    <div class="col-4">
+                        <button type="button" class="btn btn-light" onclick="showScrollProgressBar()">Task3: Scroll</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="progress-bar-container" class="container-fluid">
+                <div class="progress">
+                    <div id="scroll-progress-bar" class="progress-bar" role="progressbar"></div>
+                </div>
+            </div>
+            
+        </nav>
+
+        <section>
+            <div id="about-me-and-courses-container" class="container-fluid">
+                <div class="row">
+                    <div id="about-me-container" class="container col-md-12 col-xl-4">
+                        <h3 id="about-me">About me:</h3>
+                        <p>Although majoring in Mathematics, I have more interest on desgining and implementing web/mobile applications. Programming is always my stress reliever and I really enjoy problem solving! I also have a variety of hobbies listed below! Check it out!  </p>
+                        <h5 id="hobbies-header" style="font-weight:bold;">My Hobbies:</h5>
+                        <button id="add-hobbies-button" class=" button btn-light" onclick="promptHobby()">Add Hobbies</button>
+                        <ul id="hobbies-list" class="list-group">
+                            <li class="list-group-item">Solving Rubik's Cube</li>
+                            <li class="list-group-item">Watch seasonal animes</li>
+                            <li class="list-group-item">Playing the piano</li>
+                            <li class="list-group-item">Read about fun programming problems</li>
+                            <li class="list-group-item">Play League of Legends</li>
+                        </ul>
+                    </div>
+            
+                    <div id="courses-container" class="container col-md-12 col-xl-8">
+                        <h3>My Courses:</h3>
+                        <table class="table table-bordered table-info">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Course Code</th>
+                                    <th scope="col">Course Title</th>
+                                    <th scope="col">Concepts/technology/tools taught</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row">CSCI1520</td>
+                                    <td>Introduction to C++ and programming</td>
+                                    <td>C++, logic flows, I/O, OOP</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">CSCI2510</td>
+                                    <td>Computer Organization</td>
+                                    <td>MASM, memory hierarchy, memory allocation algorithm, cache design, CPU design, pipelining</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">CSCI2520</td>
+                                    <td>Data Structure and Applications</td>
+                                    <td>Stack, queue, linked list, hash table, binary tree, graphs and huffman coding</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">CSCI3100</td>
+                                    <td>Software Engineering</td>
+                                    <td>Group project software using the MERN stack, software design, software principles, DFD, UML, FSM, testing...</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">CSCI3150</td>
+                                    <td>Introduction to Operating System</td>
+                                    <td>Process, scheduling, multithreading, paging, linux environment</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="responsive-web-container" class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <h3>Responsive Web Design:</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col d-block">
+                        <p>Responsive design is a common way for web programmers to design their application layout. Different elements in the webpage may have different appearances when the window size has changed. There are 3 examples of my responsive web design ideas. Try adjusting the widow size and see what it does!</p>
+                        <h5 style="font-weight: bold;">1st Example: The container position</h5>
+                        <p>The "About me" and "courses" session is positioned horizontally when in large screen, vertically when in small screen.</p>
+                        <h5 style="font-weight: bold;">2nd Example: Font size of my name in header</h5>
+                        <p>The font size of my name in header will change its size according to the screen width using CSS. (The profile picture will be gone when the window is small too!)</p>
+                        <h5 style="font-weight: bold;">3rd Example: The incredible meme</h5>
+                        <p>The picture below will change its appearance when the window size is changed!</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="d-none d-sm-none d-md-none d-lg-none d-xl-flex justify-content-center">
+                        <img class="img-responsive" src="xl_incredible.jpg" style="width:300px; height:300px"/>
+                    </div>
+                    <div class="d-none d-sm-none d-md-none d-lg-flex d-xl-none justify-content-center">
+                        <img class="img-responsive" src="lg_Incredible.jpg" style="width:300px; height:300px"/>
+                    </div>
+                    <div class="d-none d-sm-none d-md-flex d-lg-none d-xl-none justify-content-center">
+                        <img class="img-responsive" src="md_incredible.jpg" style="width:300px; height:300px"/>
+                    </div>
+                    <div class="d-none d-sm-flex d-md-none d-lg-none d-xl-none justify-content-center">
+                        <img class="img-responsive" src="sm_Incredible.jpg" style="width:300px; height:300px"/>
+                    </div>
+                    <div class="d-flex d-sm-none d-md-none d-lg-none d-xl-none justify-content-center">
+                        <img class="img-responsive" src="xs_Incredible.jpg" style="width:300px; height:300px"/>
+                    </div>
+                </div>
+            </div>
+
+            <div id="comment-container" class="container-fluid d-flex justify-content-center">
+                <!--code below is referenced and modified from lab 3-->
+                <div class="container m-5">
+                    <div id="comments"> 
+                    <div class="d-flex"> <!-- flex layout -->
+                        <div class="flex-shrink-0"> <!-- disallow div to shrink when page gets smaller -->
+                        <svg height="100" width="100">
+                            <circle class="color" cx="50" cy="50" r="40" fill="green">
+                        </svg>
+                        </div>
+                        <div class="flex-grow-1"> <!-- allow div to grow and take up all space -->
+                        <h5 class="email">chuckjee@cse.cuhk.edu.hk</h5>
+                        <p class="comments">This lab is so fun! Let's explore further with Bootstrap and JS fetch.</p>
+                        </div>
+                    </div>
+                    </div>
+                    <hr>
+                    <h6>Add your comment:</h6>
+                    <form>
+                    <div class="mb-3">
+                    <label for="new-email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="new-email" placeholder="name@example.com" >
+                    <div id="empty-email-message" style="color: red; font-size: smaller; display: none;">
+                        Please enter an email address.
+                    </div>
+                    <div id="invalid-email-message" style="color: red; font-size: smaller; display: none;">
+                        Please enter a valid email address.
+                    </div>
+                    </div>
+                    <div class="mb-3">
+                    <label for="new-comment" class="form-label">Comment</label>
+                    <textarea class="form-control" id="new-comment" rows="3"></textarea>
+                    <div id="empty-comment-message" style="color: red; font-size: smaller; display: none;">
+                        Please enter a comment.
+                    </div>
+                    </div>
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="new-color" id="new-color-red" value="red">
+                    <label class="form-check-label" for="new-color-red">Red</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="new-color" id="new-color-green" value="green">
+                        <label class="form-check-label" for="new-color-green">Green</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="new-color" id="new-color-yellow" value="yellow">
+                        <label class="form-check-label" for="new-color-yellow">Yellow</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="new-color" id="new-color-blue" value="blue">
+                        <label class="form-check-label" for="new-color-blue">Blue</label>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="processForm()">Add comment</button>
+                    </form>
+                </div>
+                <!--reference ended here-->
+            </div>
+        </section>
+
+        <footer id="links-footer" class="nb-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="about">
+                            <p>Stay connected with me!</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="about">
+                            <a class="link-secondary" href="https://www.facebook.com/keith.lam.161"><i class="fa fa-facebook-square"></i></a>
+                            <a class="link-secondary" href="https://www.instagram.com/keithlamcap/"><i class="fa fa-instagram"></i></a>
+                            <a class="link-secondary" href="https://github.com/winkydes"><i class="fa fa-github-square"></i></a>
+                            <a class="link-secondary" href="https://mail.google.com"><i class="fa fa-google"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="reference-row" class="row">
+                    <div id="reference" class="text-muted">
+                        <p id="reference-text">
+                        References:<br>1. "Wave Header Module - Header Footer Design Png, Transparent Png" https://www.pngfind.com/mpng/ixmmJwx_wave-header-module-header-footer-design-png-transparent/, anonymous <br>2. "Footer - Footer Png, Transparent Png" https://www.pinpng.com/picture/hxhmJJb_footer-footer-png-transparent-png/, anonymous <br>3. "Mr Incredible Becoming Canny" https://imgflip.com/i/60pb5i, anonymous
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,126 @@
+/*
+Student Name: Lam Wai To Keith
+SID: 155133260
+*/
+
+@font-face {
+    font-family: "title-font";
+    src: url(Roboto-Bold.ttf);
+}
+
+
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container-fluid {
+    padding-inline-start: 6px;
+}
+
+header {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-image: url('Header-background.png');
+    width: 100.8%;
+}
+
+#header-title {
+    font-family: "title-font";
+    font-weight: bold;
+    text-align: left;
+    opacity: 0.9;
+    font-size: calc(4vw + 4vh);
+}
+
+#header-content {
+    text-align: left;
+    font-size: small;
+    padding: 0px;
+    color: rgb(82, 82, 82);
+}
+
+nav {
+    background-color: #e3f2fd;
+}
+
+li {
+    display: inline;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+li a {
+    text-decoration: none;
+}
+
+#taskbar {
+    background-color: #e3f2fd;
+    text-align: center;
+    display: none;
+    padding: 6px;
+}
+
+#progress-bar-container {
+    margin-top: 3px;
+    display: none;
+}
+
+#about-me-container {
+    background-color: lavenderblush;
+    padding-bottom: 20px;
+}
+
+#courses-container {
+    background-color:lightgoldenrodyellow;
+}
+
+#responsive-web-container{
+    background-color: rgb(230, 230, 230);
+    padding-bottom: 20px;
+}
+
+h3 {
+    text-align: left;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-bordered {
+    border: 3px solid cornflowerblue;
+}
+
+table.table-bordered > thead > tr > th{
+    border:3px solid cornflowerblue;
+}
+
+.link-secondary {
+    margin: 10px;
+}
+
+.link-secondary > i {
+    font-size: 44px;
+}
+
+footer.nb-footer {
+    background-image: url('footer-background.png');
+    min-height: 400px;
+    position: relative;
+}
+
+footer.nb-footer .about {
+    margin: 0 auto;
+    max-width: 1170px;
+    text-align: center; 
+}
+
+#reference {
+    font-size: small;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 5px;
+}
